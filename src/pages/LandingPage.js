@@ -1,9 +1,13 @@
-import React, {Component} from 'react'
+import React, { Component } from "react";
 
-import moduleName from 'elements/button'
+import Header from "parts/Header";
 
 export default class LandingPage extends Component {
-    render() {
-        return ( <div> </div> )
-        }
-    }
+  render() {
+    return (
+      <>
+        <Header {...this.props}></Header>
+      </>
+    );
+  }
+}
