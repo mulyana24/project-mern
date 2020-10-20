@@ -6,53 +6,53 @@
   },
   "mostPicked": [{
       "_id": "asd1293uasdads1",
-      "name": "Jung Hook Sie",
-      "type": "Apartment",
-      "imageUrl": "/images/image-mostpicked-1.jpg",
+      "name": "Diamond",
+      "type": "Decoration",
+      "imageUrl": "/images/img-mostpicked-1.jpg",
       "country": "South Korea",
       "city": "Seoul Flore",
       "price": "80",
-      "unit": "night"
+      "unit": "day"
     },
     {
       "_id": "asd1293uasdads1",
-      "name": "The People House",
-      "type": "Hotel",
-      "imageUrl": "/images/image-mostpicked-2.jpg",
+      "name": "Golden",
+      "type": "Decoration",
+      "imageUrl": "/images/img-mostpicked-2.jpg",
       "country": "Indonesia",
       "city": "Bogor",
       "price": "52",
-      "unit": "night"
+      "unit": "day"
     },
     {
       "_id": "asd1293uasdads1",
-      "name": "House Tour",
-      "type": "Rumah",
-      "imageUrl": "/images/image-mostpicked-3.jpg",
+      "name": "Platinum",
+      "type": "Decoration",
+      "imageUrl": "/images/img-mostpicked-3.jpg",
       "country": "South Korea",
       "city": "Seoul Flore",
       "price": "80",
-      "unit": "night"
-    },
-    {
-      "_id": "asd1293uasdads1",
-      "name": "Jung Hook Sie",
-      "type": "Apartment",
-      "imageUrl": "/images/image-mostpicked-4.jpg",
-      "country": "South Korea",
-      "city": "Seoul Flore",
-      "price": "80",
-      "unit": "night"
+      "unit": "day"
     },
     {
       "_id": "asd1293uasdads1",
       "name": "Jung Hook Sie",
-      "type": "Apartment",
-      "imageUrl": "/images/image-mostpicked-5.jpg",
+      "type": "Decoration",
+      "imageUrl": "/images/img-mostpicked-4.jpg",
       "country": "South Korea",
       "city": "Seoul Flore",
       "price": "80",
-      "unit": "night"
+      "unit": "day"
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "name": "Jung Hook Sie",
+      "type": "Decoration",
+      "imageUrl": "/images/img-mostpicked-5.jpg",
+      "country": "South Korea",
+      "city": "Seoul Flore",
+      "price": "80",
+      "unit": "day"
     }
   ],
   "categories": [{
