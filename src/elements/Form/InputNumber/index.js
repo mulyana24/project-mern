@@ -34,7 +34,9 @@ export default function Number(props) {
           value: +value,
         },
       });
-      setInputValue(`${prefix}${value}${suffix}${isSuffixPlural}`);
+      setInputValue(
+        `${prefix}${value}${suffix}${isSuffixPlural && value > 1 ? "s" : ""}`
+      );
     }
   };
   const minus = () => {
