@@ -108,7 +108,11 @@ section {
 }
 
 .card {
-  height: 100%;
+  &.bordered {
+    border: 1px solid $gray-200;
+  }
+
+  // height: 100%;
 
   .tag {
     z-index: 3;
@@ -229,11 +233,13 @@ footer {
   .list-group-item {
     padding: 0.3125rem 0;
     border: 0;
+
     a,
     span {
       color: $gray-500;
       font-weight: 300;
     }
+
     a {
       @include hover-focus {
         color: $gray-800;
@@ -246,5 +252,12 @@ footer {
     font-weight: 300;
 
     color: $gray-500;
+  }
+}
+
+main {
+  p {
+    color: $gray-400;
+    font-weight: 300;
   }
 }

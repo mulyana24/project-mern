@@ -3,6 +3,7 @@
 .input-date {
   .input-group {
     background-color: $white;
+
     .input-group-text {
       pointer-events: none;
       border: 0;
@@ -17,10 +18,11 @@
       position: absolute;
       z-index: 999;
     }
+
     .form-control {
       border: 0;
       border-radius: 0;
-      background-color: $gray-900;
+      color: $gray-900;
       justify-content: center;
       width: 100%;
       height: 45px;
@@ -29,6 +31,7 @@
       padding: 0.575rem 45px;
       outline: 0;
     }
+
     .date-range-wrapper {
       padding: 4px;
       background-color: $white;

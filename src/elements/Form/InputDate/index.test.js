@@ -22,7 +22,7 @@ class TestInput extends React.Component {
     return (
       <InputDate
         max={30}
-        onChange={this.onChange}
+        onChange={this.handleChange}
         name="value"
         value={this.state.value}
       />
@@ -60,7 +60,7 @@ test("should show date picker when click input field", () => {
   screen.debug();
   fireEvent.click(input, { button: 1 });
   const datePickerWrapper = container.querySelector(`.date-range-wrapper`);
-  //   screen.debug();
+  screen.debug();
 
   expect(datePickerWrapper).toBeInTheDocument();
 });

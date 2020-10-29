@@ -4,8 +4,8 @@ import propTypes from "prop-types";
 import { DateRange } from "react-date-range";
 
 import "./index.scss";
-import "react-date-range/dist/styles.css";
-import "react-date-range/dist/theme/default.css";
+import "react-date-range/dist/styles.css"; // main css file
+import "react-date-range/dist/theme/default.css"; // theme css file
 
 import formatDate from "utilts/formatDate";
 import iconCalender from "assets/images/icon/ic-calender.svg";
@@ -26,6 +26,7 @@ export default function Date(props) {
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -36,7 +37,6 @@ export default function Date(props) {
     if (refDate && !refDate.current.contains(event.target)) {
       setIsShowed(false);
     }
-    b;
   };
 
   const check = (focus) => {
@@ -44,7 +44,7 @@ export default function Date(props) {
   };
 
   const displayDate = `${value.startDate ? formatDate(value.startDate) : ""}${
-    value.endDate ? "-" + formatDate(value.endDate) : ""
+    value.endDate ? " -" + formatDate(value.endDate) : ""
   }`;
 
   return (
@@ -87,4 +87,7 @@ Date.propTypes = {
   onChange: propTypes.func,
   placeholder: propTypes.string,
   outerClassName: propTypes.string,
+  // ranges: propTypes.array,
+  // moveRangeOnFirstSelection: propTypes.bool,
+  // onRangeFocusChange: propTypes.func,
 };

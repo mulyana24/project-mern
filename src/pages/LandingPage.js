@@ -9,6 +9,11 @@ import Footer from "parts/Footer";
 import landingPage from "json/landingPage.json";
 
 export default class LandingPage extends Component {
+  componentDidMount() {
+    window.title = "NabilaWO | Home";
+    window.scrollTo(0, 0);
+  }
+
   constructor(props) {
     super(props);
     this.refMostPicked = React.createRef = {};
