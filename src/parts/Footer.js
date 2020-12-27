@@ -58,8 +58,8 @@ export default function Footer() {
             <h6 className="mt-2">Connect Us</h6>
             <ul className="list-group list-group-flush">
               <li className="list-group-item">
-                <Button isExternal type="link" href="mailto:cs@nabilawo.id">
-                  cs@nabilawo.id
+                <Button isExternal type="link" href="mailto:cs@galihwo.id">
+                  cs@galihwo.id
                 </Button>
               </li>
               <li className="list-group-item">
@@ -68,14 +68,14 @@ export default function Footer() {
                 </Button>
               </li>
               <li className="list-group-item">
-                <span>NabilaWO, Pilangsari, Majalengka</span>
+                <span>GalihWO, Pilangsari, Majalengka</span>
               </li>
             </ul>
           </div>
         </div>
         <div className="row">
           <div className="col text-center copyright">
-            Copyright 2021 • All Rights reserved • Nabila Wedding Organizer
+            Copyright 2021 • All Rights reserved • Galih Wedding Organizer
           </div>
         </div>
       </div>
