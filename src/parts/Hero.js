@@ -48,12 +48,12 @@ export default function Hero(props) {
                   width="36"
                   height="36"
                   src={IconCamera}
-                  alt={`${props.data.camera}Camera`}
+                  alt={`${props.data.couples}Couples`}
                 />
                 <h6 className="mt-3">
-                  {formatNumber(props.data.camera)}{" "}
+                  {formatNumber(props.data.couples)}{" "}
                   <span className="text-gray-500 font-weight-light">
-                    moments
+                    Couples
                   </span>
                 </h6>
               </div>
@@ -62,12 +62,12 @@ export default function Hero(props) {
                   width="36"
                   height="36"
                   src={IconCities}
-                  alt={`${props.data.cities}Cities`}
+                  alt={`${props.data.decors}Decors`}
                 />
                 <h6 className="mt-3">
-                  {formatNumber(props.data.cities)}{" "}
+                  {formatNumber(props.data.decors)}{" "}
                   <span className="text-gray-500 font-weight-light">
-                    cities
+                    Decors
                   </span>
                 </h6>
               </div>
