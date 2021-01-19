@@ -42,7 +42,7 @@ export default function Categories({ data }) {
                           href={`/properties/${item._id}`}
                           type="link"
                         >
-                          <h5 className="h4">{item.name}</h5>
+                          <h5 className="h4">{item.title}</h5>
                         </Button>
                         <span className="text-gray-500">
                           {item.village}, {item.city}
