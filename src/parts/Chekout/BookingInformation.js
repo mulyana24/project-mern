@@ -2,6 +2,7 @@ import React from "react";
 import Fade from "react-reveal/Fade";
 
 import { InputText } from "elements/Form";
+import formatNumber from "utilts/formatNumber";
 
 export default function BookingInformation(props) {
   const { data, ItemDetails, checkout } = props;
@@ -15,23 +16,23 @@ export default function BookingInformation(props) {
               <div className="card">
                 <figure className="img-wrapper" style={{ height: 270 }}>
                   <img
-                    src={ItemDetails.imageUrls[0].url}
-                    alt={ItemDetails.name}
+                    src={`${process.env.REACT_APP_HOST}/${ItemDetails.imageId[0].imageUrl}`}
+                    alt={ItemDetails.title}
                     className="img-cover"
                   />
                 </figure>
                 <div className="row align-items-center">
                   <div className="col">
                     <div className="meta-wrapper">
-                      <h5>{ItemDetails.name}</h5>
+                      <h5>{ItemDetails.title}</h5>
                       <span className="text-gray-500">
-                        {ItemDetails.country}, {ItemDetails.city}
+                        {ItemDetails.village}, {ItemDetails.city}
                       </span>
                     </div>
                   </div>
                   <div className="col-auto">
                     <span>
-                      IDR{+checkout.duration * ItemDetails.price}
+                      IDR {formatNumber(ItemDetails.price)}
                       <span className="text-gray-500"> per </span>
                       {checkout.duration} {ItemDetails.unit}
                       {+checkout.duration > 1 ? "s" : ""}

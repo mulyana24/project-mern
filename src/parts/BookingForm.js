@@ -5,6 +5,7 @@ import propTypes from "prop-types";
 
 import Button from "elements/button";
 import { InputDate, InputNumber } from "elements/Form";
+import formatNumber from "utilts/formatNumber";
 
 class BookingForm extends Component {
   constructor(props) {
@@ -86,9 +87,9 @@ class BookingForm extends Component {
       <div className="card bordered" style={{ padding: "60px 80px" }}>
         <h4 className="mb-3">Start Booking</h4>
         <h5 className="h2 text-teal mb-4">
-          IDR {itemDetails.price}{" "}
+          IDR {formatNumber(itemDetails.price)}
           <span className="text-gray-500 font-weight-light">
-            per {itemDetails.unit}
+            {/* per {itemDetails.unit} */}
           </span>
         </h5>
 
@@ -111,7 +112,8 @@ class BookingForm extends Component {
         >
           You will pay{" "}
           <span className="text-gray-900">
-            IDR {itemDetails.price * data.duration}
+            IDR {itemDetails.price}
+            {/* {itemDetails.price * data.duration} */}
           </span>{" "}
           per {""}
           <span className="text-gray-900">
