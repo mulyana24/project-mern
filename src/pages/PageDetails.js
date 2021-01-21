@@ -22,7 +22,7 @@ class PageDetails extends Component {
     window.scrollTo(0, 0);
 
     if (!this.props.page[this.props.match.params.id])
-      this.props.fetchPage(`${process.env.REACT_APP_HOST}/api/v1/member/detail-page/${this.props.match.params.id}`, this.props.match.params.id)
+      this.props.fetchPage(`/detail-page/${this.props.match.params.id}`, this.props.match.params.id)
   }
   render() {
 
