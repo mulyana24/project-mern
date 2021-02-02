@@ -9,9 +9,9 @@ import LogoMandiri from "assets/images/logo-mandiri.jpg";
 export default function Payment(props) {
   const { data, ItemDetails, checkout } = props;
 
-  const tax = 10;
-  const subTotal = ItemDetails.price * checkout.duration;
-  const grandTotal = (subTotal * tax) / 100 + subTotal;
+  // const tax = 10;
+  const subTotal = ItemDetails.price ;
+  const grandTotal = subTotal;
   return (
     <Fade>
       <div className="container" style={{ marginBottom: 30 }}>
@@ -19,7 +19,7 @@ export default function Payment(props) {
           <div className="col-5 border-right py-5" style={{ paddingRight: 80 }}>
             <Fade delay={300}>
               <p className="mb-4">Transfer Pembayaran</p>
-              <p>Tax: {tax}%</p>
+              {/* <p>Tax: {tax}%</p> */}
               <p>Sub Total: IDR{subTotal}</p>
               <p>Total: ${grandTotal}</p>
               <div className="row mt-4">
@@ -30,7 +30,7 @@ export default function Payment(props) {
                   <dl>
                     <dd>Bank Jawa Barat</dd>
                     <dd>165633857</dd>
-                    <dd>Nabila WO</dd>
+                    <dd>Galih WO</dd>
                   </dl>
                 </div>
               </div>
@@ -42,7 +42,7 @@ export default function Payment(props) {
                   <dl>
                     <dd>Bank Mandiri</dd>
                     <dd>165633857</dd>
-                    <dd>Nabila WO</dd>
+                    <dd>Galih WO</dd>
                   </dl>
                 </div>
               </div>
@@ -68,7 +68,7 @@ export default function Payment(props) {
                 onChange={props.onChange}
               />
 
-              <label htmlFor="bankHolder">Nam Pengirim</label>
+              <label htmlFor="bankHolder">Nama Pengirim</label>
               <InputText
                 type="text"
                 id="bankHolder"
