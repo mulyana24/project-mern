@@ -53,6 +53,7 @@ class PageDetails extends Component {
               <Fade bottom delay={1000}>
                 <BookingForm
                   itemDetails={page[match.params.id]}
+                  
                   startBooking={this.props.checkoutBooking}
                 />
               </Fade>
@@ -60,8 +61,8 @@ class PageDetails extends Component {
           </div>
         </section>
 
-        <Activities data={page[match.params.id].activityId} />
-        <Testimoni data={page[match.params.id].testimonial} />
+        {/* <Activities data={page[match.params.id].activityId} /> */}
+        {/* <Testimoni data={page[match.params.id].testimonial} /> */}
         <Footer />
       </>
     );

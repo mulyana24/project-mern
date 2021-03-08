@@ -11,7 +11,7 @@ import formatDate from "utilts/formatDate";
 import iconCalender from "assets/images/icon/ic-calender.svg";
 
 export default function Date(props) {
-  const { value, placeholder, name } = props;
+  const { value, placeholder, name, disabledDates } = props;
   const [isShowed, setIsShowed] = useState(false);
 
   const datePickerChange = (value) => {
@@ -19,7 +19,9 @@ export default function Date(props) {
       target: {
         value: value.selection,
         name: name,
+        // disabledDates: disabledDates,
       },
+    
     };
     props.onChange(target);
   };
@@ -46,6 +48,8 @@ export default function Date(props) {
   const displayDate = `${value.startDate ? formatDate(value.startDate) : ""}${
     value.endDate ? " -" + formatDate(value.endDate) : ""
   }`;
+
+ 
 
   return (
     <div
@@ -74,6 +78,7 @@ export default function Date(props) {
               moveRangeOnFirstSelection={false}
               onRangeFocusChange={check}
               ranges={[value]}
+              disabledDates={disabledDates}
             />
           </div>
         )}
@@ -87,6 +92,8 @@ Date.propTypes = {
   onChange: propTypes.func,
   placeholder: propTypes.string,
   outerClassName: propTypes.string,
+  disabledDates: propTypes.array,
+  
   // ranges: propTypes.array,
   // moveRangeOnFirstSelection: propTypes.bool,
   // onRangeFocusChange: propTypes.func,

@@ -7,7 +7,7 @@ export default function Categories({ data }) {
   return data.map((category, index1) => {
     if (category.itemId.length === 0) return null;
     return (
-      <section className="container" key={`category-${index1}`}>
+      <section className="container" key={`category-${index1}`} >
         <Fade bottom>
           <h4 className="mb-3 font-weight-medium">{category.name}</h4>
           <div className="container-grid">

@@ -19,6 +19,27 @@ class BookingForm extends Component {
           key: "selection",
         },
       },
+     meta: {
+      
+       disabledDates: [
+      
+        new Date(this.props.itemDetails.booking[0].bookingStartDate),
+        new Date(this.props.itemDetails.booking[0].bookingEndDate),
+        // this.props.itemDetails.booking.map(Start => (
+        //   [
+        //     new Date(Start.bookingStartDate),
+        //     new Date(Start.bookingEndDate)
+        //   ]  
+        // )),
+
+        // this.props.itemDetails.booking.map(End => (
+        //   new Date(End.bookingEndDate)
+        // ))
+        
+       ]
+
+      
+     }
     };
   }
 
@@ -29,8 +50,13 @@ class BookingForm extends Component {
         ...this.state.data,
         [e.target.name]: e.target.value,
       },
+      // meta: {
+      //   ...this.state.meta, [e.target.name]: e.target.value,
+      // }
     });
   };
+
+
 
   componentDidUpdate(prevProps, prevState) {
     const { data } = this.state;
@@ -61,9 +87,18 @@ class BookingForm extends Component {
             endDate: endDate,
           },
         },
+        // meta: {
+        //   ...this.state.meta,
+        //   disabledDates: {
+        //     ...this.state.meta.disabledDates,
+        //     Date: Date,
+        //   }
+        // }
       });
     }
   }
+
+  
 
   // function startBooking
   startBooking = () => {
@@ -75,16 +110,53 @@ class BookingForm extends Component {
         startDate: data.date.startDate,
         endDate: data.date.endDate,
       },
+      
     });
     this.props.history.push("/checkout");
   };
 
+  // Start = () => {
+  //   return(
+  //    this.props.itemDetails.booking.map(mulai => (
+  //     new Date(mulai.bookingStartDate)
+  //   ))
+  //   )
+  // }
+
   render() {
-    const { data } = this.state;
-    const { itemDetails, startBooking } = this.props;
+    const { data, meta } = this.state;
+    const { itemDetails } = this.props;
+
+    console.log(meta.disabledDates)
+    const disabled = itemDetails.booking.map(date =>(
+  
+      new Date(date.bookingStartDate)
+       
+  
+
+    ))
+
+    const disable = itemDetails.booking.map(dates =>(
+      new Date(dates.bookingEndDate)
+      
+    ))
+    console.log(disabled)
+
+    // console.log(itemDetails.booking.map(date =>(
+    //   new Date(date.bookingStartDate)
+      
+    
+    // )))
+
+    // console.log(meta.disabledDates)
+
+   
 
     return (
+
+      
       <div className="card bordered" style={{ padding: "60px 80px" }}>
+        
         <h4 className="mb-3">Start Booking</h4>
         <h5 className="h2 text-teal mb-4">
           IDR {formatNumber(itemDetails.price)}
@@ -102,10 +174,12 @@ class BookingForm extends Component {
           name="duration"
           value={data.duration}
         />
-
+       
         <label htmlFor="date">Pick a date</label>
-        <InputDate onChange={this.updateData} name="date" value={data.date} />
-
+        
+      
+       <InputDate onChange={this.updateData} name="date" value={data.date} disabledDates={disabled} />
+        
         <h6
           className="text-gray-500 font-weight-light"
           style={{ marginBottom: 40 }}
@@ -115,10 +189,10 @@ class BookingForm extends Component {
             IDR {itemDetails.price}
             {/* {itemDetails.price * data.duration} */}
           </span>{" "}
-          per {""}
+          {/* per {""}
           <span className="text-gray-900">
-            {data.duration} {itemDetails.unit}
-          </span>
+            {data.duration} 
+          </span> */}
         </h6>
 
         <Button
@@ -130,7 +204,9 @@ class BookingForm extends Component {
         >
           Continue to Book
         </Button>
+        
       </div>
+      
     );
   }
 }
@@ -138,6 +214,7 @@ class BookingForm extends Component {
 BookingForm.propTypes = {
   itemDetails: propTypes.object,
   startBooking: propTypes.func,
+  
 };
 
 export default withRouter(BookingForm);

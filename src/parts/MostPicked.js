@@ -21,7 +21,7 @@ export default function MostPicked(props) {
                       IDR {item.price}
                       <span className="font-weight-light">
                         {" "}
-                        per {item.unit}
+                        {/* per {item.unit} */}
                       </span>
                     </div>
                     <figure className="img-wrapper">

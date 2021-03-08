@@ -10,7 +10,7 @@ export default function Activities({ data }) {
             <Fade bottom>
                 <h4 className="mb-3 font-weight-medium">Activities</h4>
                 <div className="container-grid">
-                    {data.itemId.map((item, index2) => {
+                    {data.map((item, index2) => {
                         return (
                             <div
                                 className="item column-3 row-1"
@@ -44,7 +44,7 @@ export default function Activities({ data }) {
                                                 <h5 className="h4">{item.name}</h5>
                                             </Button>
                                             <span className="text-gray-500">
-                                                {item.village}, {item.city}
+                                                {item.type}
                                             </span>
                                         </div>
                                     </div>

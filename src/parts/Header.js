@@ -5,6 +5,7 @@ import Button from "elements/button";
 import BrandIcon from "parts/IconText";
 
 export default function Header(props) {
+
   // fungsi getNavLinkClass
   const getNavLinkClass = (path) => {
     //   mengembalikan jika ada pathname sama dengan path maka active
@@ -42,20 +43,20 @@ export default function Header(props) {
                   </Button>
                 </li>
                 <li className={`nav-item ${getNavLinkClass("/browse-by")}`}>
-                  <Button className="nav-link" type="link" href="/browse-by">
+                  <Button className="nav-link" type="link" href="/browse-by" >
                     Browse By
                   </Button>
                 </li>
-                <li className={`nav-item ${getNavLinkClass("/stories")}`}>
+                {/* <li className={`nav-item ${getNavLinkClass("/stories")}`}>
                   <Button className="nav-link" type="link" href="/stories">
                     Stories
                   </Button>
-                </li>
-                <li className={`nav-item ${getNavLinkClass("/agents")}`}>
+                </li> */}
+                {/* <li className={`nav-item ${getNavLinkClass("/agents")}`}>
                   <Button className="nav-link" type="link" href="/agents">
                     Agents
                   </Button>
-                </li>
+                </li> */}
               </ul>
             </div>
           </nav>

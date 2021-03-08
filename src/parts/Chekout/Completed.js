@@ -15,7 +15,7 @@ export default function Completed() {
               alt="completed checkout"
             />
             <p className="text-gray-500">
-              We will inform you via email later once the transaction has been
+              We will inform you via email or phone later once the transaction has been
               accepted
             </p>
           </div>

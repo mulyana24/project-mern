@@ -21,31 +21,32 @@ export default function Payment(props) {
               <p className="mb-4">Transfer Pembayaran</p>
               {/* <p>Tax: {tax}%</p> */}
               <p>Sub Total: IDR{subTotal}</p>
-              <p>Total: ${grandTotal}</p>
+              <p>Total: IDR{grandTotal}</p>
               <div className="row mt-4">
+                
                 <div className="col-3 text-right">
-                  <img src={LogoBjb} alt="Bank Jawa Barat" width="60" />
+                  <img src={LogoMandiri} alt="Bank Mandiri" width="60" />
                 </div>
                 <div className="col">
                   <dl>
-                    <dd>Bank Jawa Barat</dd>
-                    <dd>165633857</dd>
-                    <dd>Galih WO</dd>
+                    <dd>{ItemDetails.bank[0].nameBank}</dd>
+                    <dd>	{ItemDetails.bank[0].nomorRekening}</dd>
+                    <dd>{ItemDetails.bank[0].name}</dd>
                   </dl>
                 </div>
               </div>
-              <div className="row">
+              {/* <div className="row">
                 <div className="col-3 text-right">
                   <img src={LogoMandiri} alt="Bank Mandiri" width="60" />
                 </div>
                 <div className="col">
                   <dl>
                     <dd>Bank Mandiri</dd>
-                    <dd>165633857</dd>
-                    <dd>Galih WO</dd>
+                    <dd>	089898</dd>
+                    <dd>Galih</dd>
                   </dl>
                 </div>
-              </div>
+              </div> */}
             </Fade>
           </div>
 

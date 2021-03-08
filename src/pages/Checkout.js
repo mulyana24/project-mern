@@ -153,7 +153,7 @@ class Checkout extends Component {
                           hasShadow
                           onClick={nextStep}
                         >
-                          Continue to Book
+                          Continue to Payment
                         </Button>
                       </Fade>
                     )}
@@ -183,7 +183,7 @@ class Checkout extends Component {
                           hasShadow
                           onClick={() => this._Submit(nextStep)}
                         >
-                          Continue to Book
+                          Confirm to Payment
                         </Button>
                       </Fade>
                     )}
